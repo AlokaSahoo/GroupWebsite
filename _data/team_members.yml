@@ -69,7 +69,7 @@
 - name: "Shreyas Ramakrishna"
   slug: "Shreyas-Ramakrishna"  # This will create the URL /danish
   role: "Post Doctorate"
-  photo: "shreyas.jpg"
+  photo: "shreyas.png"
   position: "Post-doc researcher"
   email: "shreyas.ramakrishna@uni-jena.de"
   room: "Room D227, Helmholtzweg 4, Jena, Germany"
@@ -82,7 +82,6 @@
   number_educ: 3  # Update this to match the number of education entries
   
   # Academic profiles
-  website: ""
   google_scholar: "https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AH8HC4xpuuVCXspsIQ41oL6U234jCF1xqF6H9wrdsY_bTtU47EUZodO2O8SpJlgzTtvjntPvIoGysTYBzd_aRdyRere5&user=xLiaIpfSJOEC"
   orcid: "0000-0003-0580-8984"  # Your actual ORCID if available
   researchgate: "https://www.researchgate.net/profile/Shreyas-Ramakrishna-2?ev=hdr_xprf"
