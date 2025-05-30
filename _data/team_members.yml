@@ -66,14 +66,36 @@
   email: a.bondarev@hi-jena.gsi.de
   number_educ: 0
 
-- name: Dr. Shreyas Ramakrishna
-  role: Post Doctorate
-  photo: shreyas.jpg
-  info:   
-  room: D227(HW)
-  tel: ###
-  email: shreyas.ramakrishna@uni-jena.de
-  number_educ: 0
+- name: "Shreyas Ramakrishna"
+  slug: "Shreyas-Ramakrishna"  # This will create the URL /danish
+  role: "Post Doctorate"
+  photo: "shreyas.jpg"
+  position: "Post-doc researcher"
+  email: "shreyas.ramakrishna@uni-jena.de"
+  room: "Room D227, Helmholtzweg 4, Jena, Germany"
+  tel: "622"
+  
+  # Education background
+  education1: "PhD in Theoretical Physics from Friedrich-Schiller University, Jena, 2024"
+  education2: "MSc in Physics, SDM College, 2019"
+  education3: "BSc in Physics, SDM College, 2017"
+  number_educ: 3  # Update this to match the number of education entries
+  
+  # Academic profiles
+  website: ""
+  google_scholar: "https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AH8HC4xpuuVCXspsIQ41oL6U234jCF1xqF6H9wrdsY_bTtU47EUZodO2O8SpJlgzTtvjntPvIoGysTYBzd_aRdyRere5&user=xLiaIpfSJOEC"
+  orcid: "0000-0003-0580-8984"  # Your actual ORCID if available
+  researchgate: "https://www.researchgate.net/profile/Shreyas-Ramakrishna-2?ev=hdr_xprf"
+  
+  # Research information
+  research_interests: |
+    - Structured light-atom interaction
+ 
+    
+  # Biography content (supports markdown)
+  bio: |
+    I completed my university education in Karnataka and later moved to Jena to pursue my doctoral degree in theoretical physics. I successfully defended my thesis, titled Interaction of vector light with atoms on 14th November 2025 and currently pursuing postdoctoral research.
+
 
 - name: Dr. Aloka Kumar Sahoo
   url: alokasahoo.github.io
