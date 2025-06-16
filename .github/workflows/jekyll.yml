@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      GEM_HOME: ${{ github.workspace }}/.gem
+      PATH: ${{ github.workspace }}/.gem/bin:${{ env.PATH }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -33,7 +37,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential ruby-dev
-          sudo gem install bundler jekyll
+          gem install bundler jekyll
 
       # -------------------------------
       # Protobuf Compiler & Ruby Protobuf Gem
@@ -41,13 +45,14 @@ jobs:
       - name: Install Protobuf and Ruby Google Protobuf
         run: |
           sudo apt-get install -y protobuf-compiler
-          sudo gem install google-protobuf
+          gem install google-protobuf
 
       # -------------------------------
       # Bundle Install and Jekyll Build
       # -------------------------------
       - name: Install Ruby gems
         run: |
+          bundle config set path "$GEM_HOME"
           bundle install
           bundle update
 
