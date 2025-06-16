@@ -9,10 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     env:
       GEM_HOME: ${{ github.workspace }}/.gem
-      PATH: ${{ github.workspace }}/.gem/bin:${{ env.PATH }}
 
     steps:
       - name: Checkout code
@@ -37,14 +35,16 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full build-essential ruby-dev
+          export PATH="$GEM_HOME/bin:$PATH"
           gem install bundler jekyll
 
       # -------------------------------
-      # Protobuf Compiler & Ruby Protobuf Gem
+      # Protobuf Compiler & Ruby Google Protobuf Gem
       # -------------------------------
       - name: Install Protobuf and Ruby Google Protobuf
         run: |
           sudo apt-get install -y protobuf-compiler
+          export PATH="$GEM_HOME/bin:$PATH"
           gem install google-protobuf
 
       # -------------------------------
@@ -52,12 +52,14 @@ jobs:
       # -------------------------------
       - name: Install Ruby gems
         run: |
+          export PATH="$GEM_HOME/bin:$PATH"
           bundle config set path "$GEM_HOME"
           bundle install
           bundle update
 
       - name: Build Jekyll site
         run: |
+          export PATH="$GEM_HOME/bin:$PATH"
           bundle exec jekyll build
 
       - name: Upload Jekyll site artifact
