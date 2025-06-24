@@ -34,6 +34,13 @@ figcaption {
     width: 100% !important;
 }
 
+/* Active navbar link styling */
+.navbar-nav li.active a,
+.navbar-nav li a.active {
+    font-weight: bold !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 70px; /* Slightly more space for mobile navbar */
