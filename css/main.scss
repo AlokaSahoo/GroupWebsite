@@ -27,6 +27,13 @@ figcaption {
     z-index: 1030; /* Ensure the navbar stays on top of content */
 }
 
+.navbar-brand-custom {
+    font-weight: bold !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 70px; /* Slightly more space for mobile navbar */
